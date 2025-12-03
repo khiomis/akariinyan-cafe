@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://du3r8wumyt4s6"]
+
+[ext_resource type="Script" uid="uid://b51a51sk46wg3" path="res://Commons/Interaction/interaction_actor.gd" id="1_dgc8h"]
+
+[node name="InteractionActorArea" type="Area2D"]
+script = ExtResource("1_dgc8h")
+metadata/_custom_type_script = ExtResource("1_dgc8h")

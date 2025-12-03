@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://p1ycxfuk3lf3"]
+
+[ext_resource type="Script" uid="uid://b0l0oqiutdeqv" path="res://Entities/Characters/Player/StateMachine/moving_player_state.gd" id="1_6giso"]
+
+[node name="MovingPlayerState" type="Node"]
+script = ExtResource("1_6giso")
+animation = "walking"

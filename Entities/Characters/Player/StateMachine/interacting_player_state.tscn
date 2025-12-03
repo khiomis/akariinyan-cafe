@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq68s6uh6xxg3"]
+
+[ext_resource type="Script" uid="uid://d1u1cley0vmda" path="res://Entities/Characters/Player/StateMachine/interacting_player_state.gd" id="1_hdahd"]
+
+[node name="InteractingPlayerState" type="Node"]
+script = ExtResource("1_hdahd")
+type = 2

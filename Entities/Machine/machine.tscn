@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbh0v7ykiibl0"]
+
+[ext_resource type="Script" uid="uid://cfbc7327kmoqw" path="res://Entities/Machine/machine.gd" id="1_tmer6"]
+[ext_resource type="PackedScene" uid="uid://67obr5jx5ftl" path="res://Commons/Interaction/interactable_area.tscn" id="2_ncua4"]
+[ext_resource type="Texture2D" uid="uid://cvgydqsmd12n2" path="res://Temp/tinyBlocks_NOiL_1.1update.png" id="2_wd4l5"]
+[ext_resource type="Script" uid="uid://6toc73je27og" path="res://Entities/Machine/machine_interactable_area.gd" id="3_o8sk3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ncua4"]
+radius = 23.0
+height = 74.0
+
+[node name="Machine" type="StaticBody2D"]
+script = ExtResource("1_tmer6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+scale = Vector2(4, 4)
+texture = ExtResource("2_wd4l5")
+region_enabled = true
+region_rect = Rect2(19, 18, 16, 18)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, 0, 0, -15, 32, 0, 0, 16)
+
+[node name="InteractableArea" parent="." instance=ExtResource("2_ncua4")]
+script = ExtResource("3_o8sk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ncua4")
